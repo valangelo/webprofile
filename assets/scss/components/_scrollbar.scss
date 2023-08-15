@@ -1,0 +1,48 @@
+::-webkit-scrollbar {
+	background-color: antiquewhite;
+	background-image: url("#{$assetPath}seamless_paper_texture.png");
+	width: 30px;
+}
+::-webkit-scrollbar-button {
+	/* 2 */
+	&:single-button {
+		height: 5vh;
+		// background-color: red;
+		cursor: pointer;
+		// border-style: solid;
+		&:vertical:decrement {
+			// background-color: red;
+
+			background-image: url("#{$assetPath}arrowup.svg");
+		}
+		&:vertical:increment {
+			background-image: url("#{$assetPath}arrowdown.svg");
+		}
+	}
+}
+::-webkit-scrollbar-track {
+	/*3*/
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+::-webkit-scrollbar-track-piece {
+	/* 4 */
+}
+::-webkit-scrollbar-thumb {
+	/* 5 */
+
+	background-clip: content-box;
+	background-image: url("#{$assetPath}pencilclipart.svg");
+	background-size: 100% auto;
+	text-shadow: 2px 2px 5px grey;
+}
+::-webkit-scrollbar-corner {
+	/* 6 */
+}
+::-webkit-resizer {
+	/* 7 */
+}

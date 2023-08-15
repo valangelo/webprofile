@@ -1,0 +1,594 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Caveat&family=Gloria+Hallelujah&family=Nanum+Pen+Script&family=Short+Stack&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Short Stack";
+}
+
+:root {
+  --bg: #fff;
+  --text: #111;
+}
+
+strong {
+  font-weight: bold;
+}
+
+::-webkit-scrollbar {
+  background-color: antiquewhite;
+  background-image: url("./assets/images/seamless_paper_texture.png");
+  width: 30px;
+}
+
+::-webkit-scrollbar-button {
+  /* 2 */
+}
+::-webkit-scrollbar-button:single-button {
+  height: 5vh;
+  cursor: pointer;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("./assets/images/arrowup.svg");
+}
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("./assets/images/arrowdown.svg");
+}
+
+::-webkit-scrollbar-track {
+  /*3*/
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  /* 4 */
+}
+
+::-webkit-scrollbar-thumb {
+  /* 5 */
+  background-clip: content-box;
+  background-image: url("./assets/images/pencilclipart.svg");
+  background-size: 100% auto;
+  text-shadow: 2px 2px 5px grey;
+}
+
+::-webkit-scrollbar-corner {
+  /* 6 */
+}
+
+::-webkit-resizer {
+  /* 7 */
+}
+
+/*
+Idea Doodle CSS
+kaso bawal daw pahiram nlng ng svg
+*/
+/* Doodle CSS
+ * https://github.com/chr15m/DoodleCSS
+ */
+.doodle * {
+  box-sizing: border-box;
+}
+
+.doodle input,
+.doodle textarea {
+  max-width: 100%;
+}
+
+.doodle textarea {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  -o-border-image: url("./assets/images/border.svg") 10 10 10 10 stretch stretch;
+     border-image: url("./assets/images/border.svg") 10 10 10 10 stretch stretch;
+}
+
+.doodle button,
+.doodle input,
+.doodle select {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  -o-border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
+     border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
+}
+
+.doodle-border {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  -o-border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
+     border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
+}
+
+#subject,
+#body,
+#commentbox {
+  background-color: unset;
+}
+
+section {
+  scroll-margin-top: 1000px;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("./assets/images/seamless_paper_texture.png");
+}
+
+h1 {
+  font-family: "Nanum Pen Script";
+  font-size: 45px;
+  padding: 5px 0px;
+}
+
+p {
+  padding: 5px 0px;
+  font-size: 22px;
+}
+
+img:active {
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .valiw {
+    height: 150px;
+    width: 150px;
+  }
+  nav::before,
+  nav::after {
+    visibility: hidden;
+  }
+  .card-body,
+  .card-title,
+  .card-text {
+    font-size: 1rem !important;
+  }
+}
+@media (max-width: 576px) {
+  .card-body,
+  .card-title,
+  .card-text {
+    font-size: 2rem !important;
+  }
+}
+html,
+body {
+  padding: 15px;
+  -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none; /* Standard syntax */
+}
+
+html::before,
+html::after,
+body::before,
+body::after,
+nav::before,
+nav::after,
+footer::before,
+footer::after {
+  font-family: "Nanum Pen Script";
+  color: grey;
+  position: relative;
+}
+
+html::before {
+  top: -15px;
+  content: "<html>";
+}
+
+html::after {
+  bottom: -15px;
+  content: "</html>";
+}
+
+body::before {
+  top: -30px;
+  content: "<body>";
+}
+
+body::after {
+  content: "</body>";
+  bottom: -30px;
+}
+
+nav::before {
+  content: "<nav>";
+  top: -60px;
+}
+
+nav::after {
+  content: "</nav>";
+  bottom: -60px;
+}
+
+footer::before {
+  top: -35px;
+  content: "<footer>";
+}
+
+footer::after {
+  content: "</footer>";
+  bottom: -35px;
+}
+
+#landing {
+  margin-top: 1rem;
+}
+
+#abouthim {
+  margin-top: 2rem;
+}
+
+.valiw {
+  filter: drop-shadow(10px 10px 10px #222);
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.valiw:hover {
+  filter: drop-shadow(5px 5px 5px #222);
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  transform: 0.2s;
+  -webkit-transform: 0.2s;
+  -moz-transform: 0.2s;
+  -ms-transform: 0.2s;
+  -o-transform: 0.2s;
+}
+
+.img__tools {
+  width: 150px;
+}
+
+div > a > img:hover {
+  transform: translateY(2px);
+  filter: drop-shadow(1px 1px 1px #222);
+  -webkit-filter: drop-shadow(1px 1px 1px #222);
+  -webkit-transform: translateY(2px);
+  -moz-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  -o-transform: translateY(2px);
+}
+
+div > a > img {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(4px 4px 4px #222);
+  -webkit-filter: drop-shadow(4px 4px 4px #222);
+}
+
+.proto {
+  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+#landing,
+#abouthim,
+#portfolio,
+#footer {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  scroll-margin-top: 10px;
+}
+
+.navbar-nav li:hover {
+  transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  -moz-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  -o-transform: translateY(2px);
+}
+
+.navbar-nav li {
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.navbar-nav a.active {
+  color: black !important;
+  font-weight: bold;
+  text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8);
+  background-color: unset !important;
+}
+
+#main-navbar {
+  background-image: url("./assets/images/seamless_paper_texture.png");
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0px 0px 10px 4px rgb(148, 148, 148), -4px -6px 15px 4px rgb(119, 119, 119), 5px 6px 15px 3px rgb(165, 165, 165);
+}
+
+.card {
+  box-shadow: 0px 0px 10px 4px rgb(148, 148, 148), -4px -6px 15px 4px rgb(119, 119, 119), 5px 6px 15px 3px rgb(165, 165, 165);
+  height: 500px;
+  opacity: 0.75;
+}
+
+.card:hover {
+  opacity: 1;
+}
+
+.card-img {
+  opacity: 0.1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card-img-overlay {
+  height: 100%;
+}
+
+.card-img-top {
+  height: 250px;
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--lightt);
+}
+
+.card-image {
+  padding-top: 15px;
+}
+
+.card {
+  background: url("./assets/images//seamless_paper_texture.png");
+  box-shadow: 0px 0px 10px 4px rgb(148, 148, 148), -4px -6px 15px 4px rgb(119, 119, 119), 5px 6px 15px 3px rgb(165, 165, 165);
+  height: 500px;
+  opacity: 0.65;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.card:hover {
+  opacity: 0.75;
+}
+
+.card:active {
+  box-shadow: 0px 0px 10px 4px rgb(148, 148, 148), -4px -6px 15px 4px rgb(119, 119, 119), 5px 6px 15px 3px rgb(165, 165, 165);
+  opacity: 1;
+}
+
+.card-img {
+  opacity: 0.1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card-img-overlay {
+  height: 100%;
+}
+
+.card-img-top {
+  height: 250px;
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--lightt);
+}
+
+.card-text,
+.card-title {
+  padding: 0;
+}
+
+.card-title {
+  font-size: 2.5rem;
+}
+
+.card-text {
+  font-size: 2;
+}
+
+::-webkit-scrollbar {
+  background-color: antiquewhite;
+  background-image: url("./assets/images/seamless_paper_texture.png");
+  width: 30px;
+}
+
+::-webkit-scrollbar-button {
+  /* 2 */
+}
+::-webkit-scrollbar-button:single-button {
+  height: 5vh;
+  cursor: pointer;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("./assets/images/arrowup.svg");
+}
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("./assets/images/arrowdown.svg");
+}
+
+::-webkit-scrollbar-track {
+  /*3*/
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  /* 4 */
+}
+
+::-webkit-scrollbar-thumb {
+  /* 5 */
+  background-clip: content-box;
+  background-image: url("./assets/images/pencilclipart.svg");
+  background-size: 100% auto;
+  text-shadow: 2px 2px 5px grey;
+}
+
+::-webkit-scrollbar-corner {
+  /* 6 */
+}
+
+::-webkit-resizer {
+  /* 7 */
+}/*# sourceMappingURL=main.css.map */

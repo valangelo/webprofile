@@ -1,0 +1,69 @@
+//Idea from https://jacekjeznach.com/
+#subject,
+#body,
+#commentbox {
+    background-color: unset;
+}
+
+html::before,
+html::after,
+body::before,
+body::after,
+nav::before,
+nav::after,
+footer::before,
+footer::after {
+  font-family: "Nanum Pen Script";
+  color: grey;
+  position: relative;
+}
+
+
+
+html {
+    &::before {
+        top: -15px;
+        content: "<html>";
+    }
+
+    &::after {
+        bottom: -15px;
+        content: "</html>";
+    }
+}
+
+
+body {
+    &::before {
+        top: -30px;
+        content: "<body>";
+    }
+    &::after {
+        bottom: -30px;
+        content: "</body>";
+    }
+}
+
+nav {
+    &::before {
+        top: -60px;
+        content: "<nav>";
+    }
+
+    &::after {
+        bottom: -60px;
+        content: "</nav>";
+    }
+}
+
+footer {
+    &::before {
+        top: -35px;
+        content: "<footer>";
+    }
+
+    &::after {
+        bottom: -35px;
+        content: "</footer>";
+    }
+}

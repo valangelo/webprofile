@@ -1,0 +1,101 @@
+.card {
+	-webkit-box-shadow: 0px 0px 10px 4px rgba(148, 148, 148, 1),
+		-4px -6px 15px 4px rgba(119, 119, 119, 1),
+		5px 6px 15px 3px rgba(165, 165, 165, 1);
+	-moz-box-shadow: 0px 0px 10px 3px rgba(148, 148, 148, 1),
+		-4px -6px 15px 4px rgba(119, 119, 119, 1),
+		5px 6px 15px 3px rgba(165, 165, 165, 1);
+	box-shadow: 0px 0px 10px 4px rgba(148, 148, 148, 1),
+		-4px -6px 15px 4px rgba(119, 119, 119, 1),
+		5px 6px 15px 3px rgba(165, 165, 165, 1);
+	height: 500px;
+	opacity: 0.75;
+}
+.card:hover {
+	opacity: 1;
+}
+.card-img {
+	opacity: 0.1;
+	background-color: rgba(#000, 0.1);
+}
+.card-img-overlay {
+	// margin-top: 35%;
+	// position: absolute;
+	// vertical-align: middle;
+	height: 100%;
+}
+.card-img-top {
+	height: 250px;
+}
+.card a {
+	text-decoration: none;
+	color: var(--lightt);
+}
+.card-image {
+	padding-top: 15px;
+}
+
+.card {
+	background: url("#{$assetPath}/seamless_paper_texture.png");
+	-webkit-box-shadow: 0px 0px 10px 4px rgb(148, 148, 148),
+		-4px -6px 15px 4px rgb(119, 119, 119),
+		5px 6px 15px 3px rgb(165, 165, 165);
+	-moz-box-shadow: 0px 0px 10px 3px rgb(148, 148, 148),
+		-4px -6px 15px 4px rgb(119, 119, 119),
+		5px 6px 15px 3px rgb(165, 165, 165);
+	box-shadow: 0px 0px 10px 4px rgb(148, 148, 148),
+		-4px -6px 15px 4px rgb(119, 119, 119),
+		5px 6px 15px 3px rgb(165, 165, 165);
+	height: 500px;
+	opacity: 0.65;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+
+.card:hover {
+	opacity: 0.75;
+}
+.card:active {
+	-webkit-box-shadow: 0px 0px 10px 4px rgb(148, 148, 148),
+		-4px -6px 15px 4px rgb(119, 119, 119),
+		5px 6px 15px 3px rgb(165, 165, 165);
+	-moz-box-shadow: 0px 0px 10px 3px rgb(148, 148, 148),
+		-4px -6px 15px 4px rgb(119, 119, 119),
+		5px 6px 15px 3px rgb(165, 165, 165);
+	box-shadow: 0px 0px 10px 4px rgb(148, 148, 148),
+		-4px -6px 15px 4px rgb(119, 119, 119),
+		5px 6px 15px 3px rgb(165, 165, 165);
+	opacity: 1;
+}
+
+.card-img {
+	opacity: 0.1;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card-img-overlay {
+	height: 100%;
+}
+
+.card-img-top {
+	height: 250px;
+}
+
+.card a {
+	text-decoration: none;
+	color: var(--lightt);
+}
+
+.card-text,
+.card-title {
+	padding: 0;
+}
+.card-title {
+	font-size: 2.5rem;
+}
+.card-text {
+	font-size: 2;
+}

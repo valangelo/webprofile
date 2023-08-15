@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Caveat&family=Gloria+Hallelujah&family=Nanum+Pen+Script&family=Short+Stack&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.card-skill-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#subject,
+#body,
+#commentbox {
+  background-color: unset;
+}
+
+html::before,
+html::after,
+body::before,
+body::after,
+nav::before,
+nav::after,
+footer::before,
+footer::after {
+  font-family: "Nanum Pen Script";
+  color: grey;
+  position: relative;
+}
+
+html::before {
+  top: -15px;
+  content: "<html>";
+}
+html::after {
+  bottom: -15px;
+  content: "</html>";
+}
+
+body::before {
+  top: -30px;
+  content: "<body>";
+}
+body::after {
+  bottom: -30px;
+  content: "</body>";
+}
+
+nav::before {
+  top: -60px;
+  content: "<nav>";
+}
+nav::after {
+  bottom: -60px;
+  content: "</nav>";
+}
+
+footer::before {
+  top: -35px;
+  content: "<footer>";
+}
+footer::after {
+  bottom: -35px;
+  content: "</footer>";
+}
+
+html,
+body {
+  padding: 15px;
+  -webkit-user-select: none;
+  /* Safari */
+  /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none;
+  /* Standard syntax */
+}
+
+.card {
+  transition: 5s;
+  opacity: 0;
+  transform: translateX(100px);
+  -webkit-transform: translateX(100px);
+  -moz-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  -o-transform: translateX(100px);
+  -webkit-transition: 5s;
+  -moz-transition: 5s;
+  -ms-transition: 5s;
+  -o-transition: 5s;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+#landing {
+  margin-top: 1rem;
+}
+
+#abouthim {
+  margin-top: 2rem;
+}
+
+:root {
+  --scroll: 0;
+}
+
+.valiw {
+  top: 20vh;
+  position: sticky;
+  transition: transform 0.8s, opacity 0.8s, filter 0.8s;
+  -webkit-transition: transform 0.8s, opacity 0.8s, filter 0.8s;
+  -moz-transition: transform 0.8s, opacity 0.8s, filter 0.8s;
+  -ms-transition: transform 0.8s, opacity 0.8s, filter 0.8s;
+  -o-transition: transform 0.8s, opacity 0.8s, filter 0.8s;
+  opacity: 0;
+  transform: translateX(100px) rotate(180deg);
+  -webkit-transform: translateX(100px) rotate(180deg);
+  -moz-transform: translateX(100px) rotate(180deg);
+  -ms-transform: translateX(100px) rotate(180deg);
+  -o-transform: translateX(100px) rotate(180deg);
+  filter: drop-shadow(10px 10px 10px #222);
+}
+.valiw.show {
+  opacity: 1;
+  transform: translateX(0) rotate(180deg);
+  -webkit-transform: translateX(0) rotate(180deg);
+  -moz-transform: translateX(0) rotate(180deg);
+  -ms-transform: translateX(0) rotate(180deg);
+  -o-transform: translateX(0) rotate(180deg);
+}
+.valiw.show {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg);
+  -webkit-transform: translateX(0) rotate(0deg);
+  -moz-transform: translateX(0) rotate(0deg);
+  -ms-transform: translateX(0) rotate(0deg);
+  -o-transform: translateX(0) rotate(0deg);
+}
+.valiw:hover {
+  filter: drop-shadow(5px 5px 5px #222);
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  transform: scale(1.1) translateX(0) rotate(0deg);
+  -webkit-transform: scale(1.1) translateX(0) rotate(0deg);
+  -moz-transform: scale(1.1) translateX(0) rotate(0deg);
+  -ms-transform: scale(1.1) translateX(0) rotate(0deg);
+  -o-transform: scale(1.1) translateX(0) rotate(0deg);
+}
+.valiw:active, .valiw:focus {
+  filter: drop-shadow(1px 1px 1px #222);
+  -webkit-filter: drop-shadow(1px 1px 1px #222);
+  transform: scale(1.2) translateX(0) rotate(0deg);
+  -webkit-transform: scale(1.2) translateX(0) rotate(0deg);
+  -moz-transform: scale(1.2) translateX(0) rotate(0deg);
+  -ms-transform: scale(1.2) translateX(0) rotate(0deg);
+  -o-transform: scale(1.2) translateX(0) rotate(0deg);
+}
+
+h1 {
+  font-family: "Nanum Pen Script";
+  font-size: 45px;
+  padding: 5px 0px;
+}
+
+p {
+  padding: 5px 0px;
+  font-size: 22px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Short Stack";
+  background: url("./assets/images/seamless_paper_texture.png");
+}
+
+:root {
+  --bg: #fff;
+  --text: #111;
+}
+
+strong {
+  font-weight: bold;
+}
+
+section {
+  scroll-margin-top: 1000px;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  scroll-behavior: smooth;
+}
+
+.padded-box {
+  height: 0;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-img-top {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+div > a > img:hover {
+  transform: translateY(2px);
+  filter: drop-shadow(1px 1px 1px #222);
+  -webkit-filter: drop-shadow(1px 1px 1px #222);
+  -webkit-transform: translateY(2px);
+  -moz-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  -o-transform: translateY(2px);
+}
+
+div > a > img {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(4px 4px 4px #222);
+  -webkit-filter: drop-shadow(4px 4px 4px #222);
+}
+
+.proto {
+  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+}
+
+.card {
+  box-shadow: 0px 0px 10px 4px rgb(148, 148, 148), -4px -6px 15px 4px rgb(119, 119, 119), 5px 6px 15px 3px rgb(165, 165, 165);
+  height: 500px;
+  opacity: 0.75;
+}
+
+.card:hover {
+  opacity: 1;
+}
+
+.card-img {
+  opacity: 0.1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card-img-overlay {
+  height: 100%;
+}
+
+.card-img-top {
+  height: 250px;
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--lightt);
+}
+
+.card-image {
+  padding-top: 15px;
+}
+
+.card {
+  background: url("./assets/images/seamless_paper_texture.png");
+  box-shadow: 0px 0px 10px 4px rgb(148, 148, 148), -4px -6px 15px 4px rgb(119, 119, 119), 5px 6px 15px 3px rgb(165, 165, 165);
+  height: 500px;
+  opacity: 0.65;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.card:hover {
+  opacity: 0.75;
+}
+
+.card:active {
+  box-shadow: 0px 0px 10px 4px rgb(148, 148, 148), -4px -6px 15px 4px rgb(119, 119, 119), 5px 6px 15px 3px rgb(165, 165, 165);
+  opacity: 1;
+}
+
+.card-img {
+  opacity: 0.1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card-img-overlay {
+  height: 100%;
+}
+
+.card-img-top {
+  height: 250px;
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--lightt);
+}
+
+.card-text,
+.card-title {
+  padding: 0;
+}
+
+.card-title {
+  font-size: 2.5rem;
+}
+
+.card-text {
+  font-size: 2;
+}
+
+/*
+Idea from Doodle CSS
+kaso bawal daw pahiram nlng ng svg
+*/
+/* Doodle CSS
+ * https://github.com/chr15m/DoodleCSS
+ */
+.doodle * {
+  box-sizing: border-box;
+}
+
+.doodle input,
+.doodle textarea {
+  max-width: 100%;
+}
+
+.doodle textarea {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  -o-border-image: url("./assets/images/border.svg") 10 10 10 10 stretch stretch;
+     border-image: url("./assets/images/border.svg") 10 10 10 10 stretch stretch;
+}
+
+.doodle button:not(.navbar-toggler),
+.doodle input,
+.doodle select {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  -o-border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
+     border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
+}
+
+.doodle-border {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  -o-border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
+     border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
+}
+
+#subject,
+#body,
+#commentbox {
+  background-color: unset;
+}
+
+::-webkit-scrollbar {
+  background-color: antiquewhite;
+  background-image: url("./assets/images/seamless_paper_texture.png");
+  width: 30px;
+}
+
+::-webkit-scrollbar-button {
+  /* 2 */
+}
+
+::-webkit-scrollbar-button:single-button {
+  height: 5vh;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("./assets/images/arrowup.svg");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("./assets/images/arrowdown.svg");
+}
+
+::-webkit-scrollbar-track {
+  /*3*/
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-track-piece {
+  /* 4 */
+}
+
+::-webkit-scrollbar-thumb {
+  /* 5 */
+  background-clip: content-box;
+  background-image: url("./assets/images/pencilclipart.svg");
+  background-size: 100% auto;
+  text-shadow: 2px 2px 5px grey;
+}
+
+::-webkit-scrollbar-corner {
+  /* 6 */
+}
+
+::-webkit-resizer {
+  /* 7 */
+}
+
+.navbar-nav li:hover {
+  transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  -moz-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  -o-transform: translateY(2px);
+}
+
+.navbar-nav li {
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.navbar-nav a.active {
+  color: black !important;
+  font-weight: bold;
+  text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8);
+  background-color: unset !important;
+}
+
+#main-navbar {
+  background-image: url("./assets/images/seamless_paper_texture.png");
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0px 0px 10px 4px rgb(148, 148, 148), -4px -6px 15px 4px rgb(119, 119, 119), 5px 6px 15px 3px rgb(165, 165, 165);
+}
+
+@media (max-width: 768px) {
+  .valiw {
+    height: 150px;
+    width: 150px;
+  }
+  nav::before,
+  nav::after {
+    visibility: hidden;
+  }
+  .card-body,
+  .card-title,
+  .card-text {
+    font-size: 1rem !important;
+  }
+}
+@media (max-width: 576px) {
+  .card-body,
+  .card-title,
+  .card-text {
+    font-size: 2rem !important;
+  }
+}/*# sourceMappingURL=main copy.css.map */
